@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+numpy
+faiss-cpu
+pillow
+python-multipart
+open_clip_torch
+torch
+redis
+pytest
+httpx
+requests

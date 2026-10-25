@@ -1,0 +1,20 @@
+2026-10-15T11:52:03,953 Using pip 25.2 from C:\Users\Suman Raj\pyrhon\project\.venv\Lib\site-packages\pip (python 3.13)
+2026-10-15T11:52:03,958 Non-user install because user site-packages disabled
+2026-10-15T11:52:04,726 Created temporary directory: C:\Users\Suman Raj\AppData\Local\Temp\pip-build-tracker-si6m51lo
+2026-10-15T11:52:04,727 Initialized build tracking at C:\Users\Suman Raj\AppData\Local\Temp\pip-build-tracker-si6m51lo
+2026-10-15T11:52:04,728 Created build tracker: C:\Users\Suman Raj\AppData\Local\Temp\pip-build-tracker-si6m51lo
+2026-10-15T11:52:04,728 Entered build tracker: C:\Users\Suman Raj\AppData\Local\Temp\pip-build-tracker-si6m51lo
+2026-10-15T11:52:04,729 Created temporary directory: C:\Users\Suman Raj\AppData\Local\Temp\pip-install-del3qfup
+2026-10-15T11:52:04,731 Created temporary directory: C:\Users\Suman Raj\AppData\Local\Temp\pip-ephem-wheel-cache-bvbowpp6
+2026-10-15T11:52:04,800 Requirement already satisfied: pytest in c:\users\suman raj\pyrhon\project\.venv\lib\site-packages (9.1.1)
+2026-10-15T11:52:04,837 Requirement already satisfied: colorama>=0.4 in c:\users\suman raj\pyrhon\project\.venv\lib\site-packages (from pytest) (0.4.6)
+2026-10-15T11:52:04,840 Requirement already satisfied: iniconfig>=1.0.1 in c:\users\suman raj\pyrhon\project\.venv\lib\site-packages (from pytest) (2.3.1)
+2026-10-15T11:52:04,842 Requirement already satisfied: packaging>=22 in c:\users\suman raj\pyrhon\project\.venv\lib\site-packages (from pytest) (26.3)
+2026-10-15T11:52:04,844 Requirement already satisfied: pluggy<2,>=1.5 in c:\users\suman raj\pyrhon\project\.venv\lib\site-packages (from pytest) (1.6.0)
+2026-10-15T11:52:04,847 Requirement already satisfied: pygments>=2.7.2 in c:\users\suman raj\pyrhon\project\.venv\lib\site-packages (from pytest) (2.21.0)
+2026-10-15T11:52:04,947 Created temporary directory: C:\Users\Suman Raj\AppData\Local\Temp\pip-unpack-nhba98g0
+2026-10-15T11:52:05,742 Remote version of pip: 26.2.1
+2026-10-15T11:52:05,743 Local version of pip:  25.2
+2026-10-15T11:52:05,749 Was pip installed by pip? True
+2026-10-15T11:52:05,749 WARNING: UpgradePrompt(old='25.2', new='26.2.1')
+2026-10-15T11:52:05,759 Removed build tracker: 'C:\\Users\\Suman Raj\\AppData\\Local\\Temp\\pip-build-tracker-si6m51lo'
