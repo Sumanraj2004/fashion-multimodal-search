@@ -1,0 +1,65 @@
+[33m79c9d3a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m Phase 3a: CORS, /categories, rate limiting
+ .env.example                                       |  16 [32m++[m
+ .gitignore                                         |  22 [32m+++[m
+ README.md                                          |  79 [32m++++++++[m
+ alembic.ini                                        |  29 [32m+++[m
+ backend/__init__.py                                |   1 [32m+[m
+ backend/app/__init__.py                            |   1 [32m+[m
+ backend/app/core/__init__.py                       |   1 [32m+[m
+ backend/app/core/config.py                         |  26 [32m+++[m
+ backend/app/db/__init__.py                         |   1 [32m+[m
+ backend/app/db/base.py                             |   7 [32m+[m
+ backend/app/db/models.py                           |  26 [32m+++[m
+ backend/app/db/session.py                          |  13 [32m++[m
+ backend/app/search_api/__init__.py                 |   0
+ backend/app/search_api/app.py                      | 198 [32m+++++++++++++++++++++[m
+ backend/app/search_api/cache.py                    |  76 [32m++++++++[m
+ backend/app/search_api/catalog.py                  |  98 [32m++++++++++[m
+ backend/app/search_api/config.py                   |  68 [32m+++++++[m
+ backend/app/search_api/embedder.py                 |  57 [32m++++++[m
+ backend/app/search_api/index_store.py              |  50 [32m++++++[m
+ backend/app/search_api/schemas.py                  |  62 [32m+++++++[m
+ backend/app/search_api/service.py                  |  90 [32m++++++++++[m
+ backend/app/search_api/tagging.py                  |  73 [32m++++++++[m
+ backend/migrations/env.py                          |  40 [32m+++++[m
+ backend/migrations/script.py.mako                  |  17 [32m++[m
+ .../migrations/versions/0001_create_products.py    |  29 [32m+++[m
+ backend/tests/search_api/__init__.py               |   0
+ backend/tests/search_api/conftest.py               |  68 [32m+++++++[m
+ backend/tests/search_api/test_api.py               | 168 [32m+++++++++++++++++[m
+ backend/tests/search_api/test_tagging.py           |  49 [32m+++++[m
+ backend/tests/search_api/test_units.py             |  74 [32m++++++++[m
+ benchmark_latency.py                               |  21 [32m+++[m
+ check_alignment.py                                 |  22 [32m+++[m
+ check_query_embedding.py                           |  27 [32m+++[m
+ check_retrieval.py                                 |  17 [32m++[m
+ check_v3.py                                        |  37 [32m++++[m
+ check_v4.py                                        |  23 [32m+++[m
+ check_v5.py                                        |  30 [32m++++[m
+ data/README.md                                     |  11 [32m++[m
+ data/artifacts_v2/catalog.faiss                    | Bin [31m0[m -> [32m10104877[m bytes
+ data/processed/.gitkeep                            |   1 [32m+[m
+ data/raw/.gitkeep                                  |   0
+ docker-compose.yml                                 |  19 [32m++[m
+ download_data.py                                   |  36 [32m++++[m
+ eval_text_to_image.py                              |  81 [32m+++++++++[m
+ pip-install-debug.log                              |  20 [32m+++[m
+ pipeline/__init__.py                               |   1 [32m+[m
+ pipeline/catalog_repository.py                     |  33 [32m++++[m
+ pipeline/cleaning.py                               |  26 [32m+++[m
+ pipeline/config.py                                 |  29 [32m+++[m
+ pipeline/dataset_loader.py                         | 104 [32m+++++++++++[m
+ pipeline/embeddings.py                             | 102 [32m+++++++++++[m
+ pipeline/evaluate_retrieval.py                     |  70 [32m++++++++[m
+ pipeline/evaluation_set.py                         |  48 [32m+++++[m
+ pipeline/image_store.py                            |  61 [32m+++++++[m
+ pipeline/run_phase1.py                             | 177 [32m++++++++++++++++++[m
+ pipeline/schemas.py                                |  36 [32m++++[m
+ pipeline/vector_index.py                           |  69 [32m+++++++[m
+ pyproject.toml                                     |  43 [32m+++++[m
+ requirements-phase2.txt                            |  13 [32m++[m
+ tests/pipeline/test_cleaning.py                    |  19 [32m++[m
+ tests/pipeline/test_embeddings.py                  |  14 [32m++[m
+ tests/pipeline/test_evaluation.py                  |  33 [32m++++[m
+ tests/pipeline/test_vector_index.py                |  12 [32m++[m
+ 63 files changed, 2674 insertions(+)
