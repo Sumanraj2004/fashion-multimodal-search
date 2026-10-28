@@ -24,15 +24,17 @@ def test_categories_returns_sorted_product_counts(client):
 
 
 def test_cors_allows_configured_frontend_origin(client):
-    response = client.options(
-        "/search/text",
-        headers={
-            "Origin": "http://localhost:3000",
-            "Access-Control-Request-Method": "POST",
-        },
-    )
-    assert response.status_code == 200
-    assert response.headers["access-control-allow-origin"] == "http://localhost:3000"
+    for origin in ("http://localhost:3000", "http://127.0.0.1:3000"):
+        response = client.options(
+            "/search/text",
+            headers={
+                "Origin": origin,
+                "Access-Control-Request-Method": "POST",
+            },
+        )
+        assert response.status_code == 200
+        assert response.headers["access-control-allow-origin"] == origin
+
     denied = client.options(
         "/search/text",
         headers={
@@ -71,10 +73,17 @@ def test_search_rate_limit_is_configurable_and_per_endpoint(client, png_bytes):
     )
     app = create_app(Services(services.search, services.catalog, limited_settings))
     with TestClient(app) as limited_client:
-        assert limited_client.post("/search/text", json={"query": "item 3"}).status_code == 200
-        limited = limited_client.post("/search/text", json={"query": "item 4"})
+        origin_headers = {"Origin": "http://localhost:3000"}
+        assert limited_client.post(
+            "/search/text", json={"query": "item 3"}, headers=origin_headers
+        ).status_code == 200
+        limited = limited_client.post(
+            "/search/text", json={"query": "item 4"}, headers=origin_headers
+        )
         assert limited.status_code == 429
         assert int(limited.headers["retry-after"]) >= 1
+        assert limited.headers["access-control-allow-origin"] == "http://localhost:3000"
+        assert limited.headers["access-control-expose-headers"] == "Retry-After"
         assert limited_client.get("/health").status_code == 200
         image_response = limited_client.post(
             "/search/image",

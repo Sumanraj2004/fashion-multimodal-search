@@ -124,6 +124,7 @@ def create_app(services: Optional[Services] = None) -> FastAPI:
         allow_origins=list(settings.allowed_origins),
         allow_methods=["*"],
         allow_headers=["*"],
+        expose_headers=["Retry-After"],
     )
 
     def svc(request: Request) -> Services:

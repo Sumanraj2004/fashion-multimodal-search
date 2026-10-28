@@ -77,3 +77,4 @@ After a complete run, copy the measured values from `data/artifacts/baseline_met
 - `mean_latency_ms`, model name, device, and embedding batch size
 
 Do not claim a metric until that report has been generated on your hardware. Phase 6 will reuse the same labels for the before/after fine-tuning comparison.
+

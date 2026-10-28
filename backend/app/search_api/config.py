@@ -28,7 +28,10 @@ class Settings:
     # --- Category tagging (fixes the all-"AMAZON FASHION" category problem) ---
     zero_shot_categories: bool = True
     # --- Public demo request protection ---
-    allowed_origins: tuple[str, ...] = ("http://localhost:3000",)
+    allowed_origins: tuple[str, ...] = (
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    )
     rate_limit_requests: int = 30
     rate_limit_window_seconds: int = 60
 

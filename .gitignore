@@ -20,3 +20,9 @@ data/artifacts_v2/*.npy
 __pycache__/
 .pytest_cache/
 node_modules/
+
+node_modules/
+.next/
+.env.local
+frontend/.next/
+frontend/node_modules/
