@@ -1,5 +1,7 @@
 # Multimodal AI Search and Recommendation Platform
 
+[![CI](https://github.com/Sumanraj2004/fashion-multimodal-search/actions/workflows/ci.yml/badge.svg)](https://github.com/Sumanraj2004/fashion-multimodal-search/actions/workflows/ci.yml)
+
 Phase 1 provides a reproducible fashion-catalog ingestion pipeline, OpenCLIP embeddings, an exact FAISS
 cosine-similarity baseline, PostgreSQL metadata storage, and a labeled text-retrieval evaluation.
 
