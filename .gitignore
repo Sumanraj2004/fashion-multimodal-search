@@ -17,6 +17,8 @@ data/images/
 data/raw/meta_Fashion.jsonl
 data/artifacts/
 data/artifacts_v2/*.npy
+!data/artifacts_v2/index_product_ids.npy
+!data/raw/catalog.jsonl
 __pycache__/
 .pytest_cache/
 node_modules/
@@ -26,3 +28,4 @@ node_modules/
 .env.local
 frontend/.next/
 frontend/node_modules/
+!data/artifacts_v2/index_product_ids.npy
